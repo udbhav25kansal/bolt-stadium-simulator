@@ -64,7 +64,7 @@ export function Timeline() {
       </div>
 
       {/* Custom slider thumb styles */}
-      <style jsx>{`
+      <style>{`
         .slider-thumb::-webkit-slider-thumb {
           appearance: none;
           width: 24px;
