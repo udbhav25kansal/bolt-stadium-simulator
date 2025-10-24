@@ -8,10 +8,10 @@ export function StadiumShell() {
   const fieldRef = useRef<Mesh>(null);
   const premiumBlock = useSimulationStore((state) => state.snapshot.premium_block);
 
-  // Load textures
-  const stadiumTexture = useTexture('/stadium-texture.png');
-  const skylineTexture = useTexture('/skyline.png');
-  const groundTexture = useTexture('/ground-texture.png');
+  // Load textures (use relative paths for GitHub Pages)
+  const stadiumTexture = useTexture(`${import.meta.env.BASE_URL}stadium-texture.png`);
+  const skylineTexture = useTexture(`${import.meta.env.BASE_URL}skyline.png`);
+  const groundTexture = useTexture(`${import.meta.env.BASE_URL}ground-texture.png`);
 
   // Configure stadium texture wrapping and repeat
   useMemo(() => {
